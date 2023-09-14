@@ -55,7 +55,7 @@ namespace Commands
                                     Console.WriteLine("----------------------------------");
                                     Console.WriteLine("InsertFood Recipe Card");
                                     Console.OutputEncoding = System.Text.Encoding.UTF8;
-                                    Console.WriteLine("Recipie goes here");
+                                    Console.WriteLine("Recipe goes here");
                                     Console.WriteLine("Press \"Z\" to continue");
                                     Console.ReadKey();
                                     Program.ReloopMain();
@@ -65,7 +65,7 @@ namespace Commands
                                     Console.WriteLine("----------------------------------");
                                     Console.WriteLine("InsertFood Recipe Card");
                                     Console.OutputEncoding = System.Text.Encoding.UTF8;
-                                    Console.WriteLine("Recipie goes here");
+                                    Console.WriteLine("Recipe goes here");
                                     Console.WriteLine("Press \"Z\" to continue");
                                     Console.ReadKey();
                                     Program.ReloopMain();
