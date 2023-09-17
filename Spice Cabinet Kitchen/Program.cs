@@ -1,16 +1,14 @@
 ﻿//Add the namespace to program calling
 
-using Toolkit;
-
 class Program
 {
     static void Main(string[] args)
     {
         //UnComment these to continue testing out the Search Function!
-        //Commands.Testing_Search_Functions Sf = new Commands.Testing_Search_Functions();
-        //Sf.kjh();
+        //Testing_Search_Functions Sf = new Testing_Search_Functions();
+        //Commands.Sf.kjh();
         Program.ReloopMain();
-        
+
     }
     public static void ReloopMain()
     {
@@ -29,7 +27,7 @@ class Program
         Console.WriteLine("You find yourself standing in a fragrant kitchen \nWhat would you like to do?");
         Console.WriteLine("\n 1. Package the Eggs for the Market? \n 2. Call the Cat? \n 3. Read Recipes? \n 4. Leave the Kitchen? (Exits the Program)");
 
-        string? options = Console.ReadLine();
+        string options = Console.ReadLine();
         Console.WriteLine("----------------------------------");
         //switch for running the seperate programs
         switch (options)
@@ -50,9 +48,12 @@ class Program
                 //exits the program
                 break;
             default:
-                CommonTools.Continue("Please choose a valid number");
+                Console.WriteLine("Please choose a valid number");
+                Console.WriteLine("Press \"Z\" to continue");
+                Console.ReadKey();
+                Program.ReloopMain();
                 break;
         }
-        
+
     }
 }

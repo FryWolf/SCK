@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 namespace Commands
 {
@@ -14,16 +13,23 @@ namespace Commands
             sb.AppendLine("\n");
             sb.AppendLine("How many eggs do you want to put in cartons?");
             Console.WriteLine(sb.ToString());
-            int NumOfEggs=0;
-            while (NumOfEggs == 0)
+            int NumOfEggs = -1;
+            while (NumOfEggs == -1)
             {
                 try
                 {
                     NumOfEggs = Convert.ToInt32(Console.ReadLine());
+                    if (NumOfEggs < 0)
+                    {
+                        NumOfEggs = -1;
+                        Console.WriteLine("Are you crazy? Just put in a normal number...");
+                    }
                 }
-                catch (FormatException) { NumOfEggs = 0; Console.WriteLine("Error: Invalid input. Please enter a valid integer (e.g 23871)."); }
-                catch (OverflowException) { Console.WriteLine("Error: Input is out of range. Please enter an integer between -2147483648 and 2147483647"); }
+                catch (FormatException) { NumOfEggs = 0; Console.WriteLine("We have a lot of eggs, but we don't have that many."); }
+                catch (OverflowException) { Console.WriteLine("\nPlease try a smaller number!"); }
+
             }
+
             Console.WriteLine("----------------------------------");
             int extraCarton = 0;
             int extra = (NumOfEggs % 12);
@@ -47,6 +53,7 @@ namespace Commands
             Console.WriteLine(sb);
             Console.ReadKey();
             Program.ReloopMain();
+
         }
 
     }

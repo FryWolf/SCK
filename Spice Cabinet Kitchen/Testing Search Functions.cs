@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Commands
+﻿namespace Commands
 {
     internal class Testing_Search_Functions
     {
@@ -15,7 +9,7 @@ namespace Commands
 
             string? foodItem = Console.ReadLine();
 
-            if (food.Contains(null)) 
+            if (food.Contains(null))
             {
                 Console.WriteLine("Yes");
                 Console.ReadKey();
